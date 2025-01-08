@@ -963,12 +963,13 @@ footer {
   background-color: #f1c40f;  
   color: #333; /* Dark Gray for text */
   text-align: center;
-  font-size: 0.9rem;
+   padding-bottom: 10px;
+  font-size: 1.1rem;
   border-top: 1px solid #ddd; /* Optional: Adds a subtle separator */
 }
 
 footer p {
-  margin: 0;
+  margin: 25px;
 }
 
 footer a {
