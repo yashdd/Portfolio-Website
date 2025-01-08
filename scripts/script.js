@@ -1,10 +1,9 @@
 // JavaScript to toggle the navigation menu on smaller screens
-const hamburger = document.getElementById('hamburger');
-const navLinks = document.getElementById('nav-links');
+// const navLinks = document.getElementById('nav-links');
 
-hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
-});
+// hamburger.addEventListener('click', () => {
+//   navLinks.classList.toggle('active');
+// });
 
 function showDetails(projectId) {
     const projectDetails = {
@@ -91,5 +90,17 @@ function showDetails(projectId) {
   
   function closeDetails() {
     document.getElementById("project-details-modal").style.display = "none";
+  }
+  
+  
+// const navbar = document.querySelector('.navbar');
+// const hamburger = document.getElementById('hamburger');
+
+// hamburger.addEventListener('click', () => {
+//   navbar.classList.toggle('active'); // Add/remove the 'active' class
+// });
+function toggleNavbar() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
   }
   
