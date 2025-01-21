@@ -92,15 +92,12 @@ function showDetails(projectId) {
     document.getElementById("project-details-modal").style.display = "none";
   }
   
-  
-// const navbar = document.querySelector('.navbar');
-// const hamburger = document.getElementById('hamburger');
 
-// hamburger.addEventListener('click', () => {
-//   navbar.classList.toggle('active'); // Add/remove the 'active' class
-// });
-function toggleNavbar() {
-    const navLinks = document.querySelector('.nav-links');
+  
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  
+  hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
-  }
+  });
   
