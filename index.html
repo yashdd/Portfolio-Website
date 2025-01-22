@@ -4,19 +4,19 @@
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Yash Deshpande Portfolio</title>
-  <link href="styles/style.css" rel="stylesheet">
+  <link href="styles/style1.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
 </head>
-<body>
 
+<body>
   <header class="navbar">
     <nav>
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
+        <li><a href="#about-section">About</a></li>
         <li><a href="#resume">Resume</a></li>
+        <li><a href="#education">Education</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -25,293 +25,273 @@
   </header>
   
   <section id="home" class="hero">
-    <img src="images/intro1111.jpg" alt="Background Image" class="hero-img">
     <div class="hero-overlay">
       <h1 class="hero-title">Hi, I'm Yash Deshpande</h1>
-      <p class="hero-description">A dedicated Computer Science Master's Student at Stevens Institute of Technology.</p>
-      <p class="hero-specialization">Passionate about Software Development, Machine Learning, and AI Technologies.</p>
+      <p class="hero-description">
+        A dedicated Computer Science Master's Student at Stevens Institute of Technology.
+      </p>
+      <p class="hero-specialization">
+        I am based in Jersey City and passionate about software development, machine learning, and AI technologies.
+      </p>
       <a href="#about" class="cta-button">Learn More</a>
     </div>
   </section>
-  
 
-  
-  <section id="about" class="about-section">
-    <div class="about-heading">
-      <h2>About Me</h2>
-    </div>
+  <section id="about-section" class="about-section">
     <div class="about-container">
-      <div class="about-content">
-        <div class="about-image">
-          <img src="images/yash.jpg" alt="Yash Deshpande">
+      <!-- Left Partition -->
+      <div class="about-left">
+        <div class="about-photo">
+          <img src="images/yash_deshpande.png" alt="Yash Deshpande" id="profile-photo">
         </div>
-        <div class="additional-details">
+        <h4 class="skills-heading">SKILLS</h4>
+        <div class="skills-category">
+          <div class="skills-card">
+            <h4 class="category-title">Programming Languages</h4>
+            <p>Python, JavaScript, SQL, C, C++, Java, R, HTML, CSS, PHP</p>
+          </div>
+          <div class="skills-card">
+            <h4 class="category-title">Databases</h4>
+            <p>MongoDB, MySQL, PostgreSQL</p>
+          </div>
+          <div class="skills-card">
+            <h4 class="category-title">Frameworks and Libraries</h4>
+            <p>NodeJS, ExpressJS, ReactJS, Langchain, Django, Flask, Pytorch, Scikit-learn, Tensorflow, Keras, Pandas, Numpy, Matplotlib, Seaborn, Langchain</p>
+          </div>
+          <div class="skills-card">
+            <h4 class="category-title">Technologies & Tools</h4>
+            <p>Power BI, Tableau, AWS, Postman, Git, GitHub, Bloomberg, Pega RPA, Blueprism</p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="about-right">
+        <h2>ABOUT ME</h2>
+        <p>
+          Hello, I'm Yash Deshpande, a passionate Computer Science master's student at Stevens Institute of Technology. I did my undergrad in Information Technology from University of Mumbai.
+        </p>
+        <p>
+          With a passion for technology and innovation, I am focused on advancing my skills in Software development, Machine learning, and Data analysis. My academic journey, combined with my Work Experience at Tata Consultancy Services (TCS) has equipped me with a robust technical foundation and a problem-solving mindset. During my undegrad I worked on a project named Student Information Management System (SIMS) which is currently live and used by my undergrad college for 5+ years with more than 10,000 users till date. I have a strong interest in Large Language Models and actively leverage them to explore and implement diverse use cases, pushing the boundaries of innovation and practical applications. Explore my portfolio to learn more about my work and the projects that drive my enthusiasm for the tech world.     </p>
+        <div class="about-details">
           <p><strong>Email:</strong> ydeshpan1@stevens.edu</p>
           <p><strong>Phone:</strong> +1 (201)-492-8776</p>
-          <p><strong>Birthday:</strong> 26 April 2000</p>
-          <p><strong>Age:</strong> 24</p>
           <p><strong>City:</strong> Jersey City, USA</p>
+          <p><strong>Age:</strong> 24</p>
           <p><strong>Degree:</strong> Masters of Science (MS)</p>
           <p><strong>Course:</strong> Computer Science</p>
           <p><strong>College:</strong> Stevens Institute of Technology</p>
           <p><strong>Expected Graduation:</strong> May 2025</p>
         </div>
       </div>
-      <div class="about-text">
-        <p>
-          With a passion for technology and innovation, I am focused on advancing my skills in software development, 
-          machine learning, and data analysis. My academic journey, combined with hands-on project experience, has 
-          equipped me with a robust technical foundation and a problem-solving mindset. Explore my portfolio to learn 
-          more about my work and the projects that drive my enthusiasm for the tech world. My academic journey has 
-          endowed me with a robust technical foundation through an array of courses such as Machine Learning, Web 
-          Development, Cloud Computing, Data Structures, and Data Mining.
-        </p>
-      </div>
-      <div class="social-links">
-        <a href="https://www.linkedin.com/in/yash-deshpande-70827417b/" target="_blank" class="social-icon linkedin"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/yashdd" target="_blank" class="social-icon github"><i class="fab fa-github"></i></a>
-        <a href="https://www.instagram.com/yashdeshpande10/?igsh=YXF6d3RjN284M3Jq#" target="_blank" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
-      </div>
-      
     </div>
-    <section id="skills" class="skills-section">
-      <div class="skills-heading">
-        <h2>Skills</h2>
-      </div>
-      <div class="skills-container">
-        <!-- Programming Languages -->
-        <div class="skills-category">
-          <div class="subcategory-heading">
-            <span>Programming Languages</span>
-          </div>
-          <div class="skills-grid">
-            <div class="skill-card">Python</div>
-            <div class="skill-card">JavaScript</div>
-            <div class="skill-card">C</div>
-            <div class="skill-card">C++</div>
-            <div class="skill-card">R</div>
-            <div class="skill-card">HTML</div>
-            <div class="skill-card">CSS</div>
-            <div class="skill-card">PHP</div>
-            <div class="skill-card">SQL</div>
-          </div>
-        </div>
-    <br>
-        <!-- Databases -->
-        <div class="skills-category">
-          <div class="subcategory-heading">
-            <span>Databases</span>
-          </div>
-          <div class="skills-grid">
-            <div class="skill-card">MongoDB</div>
-            <div class="skill-card">MySQL</div>
-            <div class="skill-card">PostgreSQL</div>
-          </div>
-        </div>
-        <br>
-        <!-- Frameworks -->
-        <div class="skills-category">
-          <div class="subcategory-heading">
-            <span>Frameworks</span>
-          </div>
-          <div class="skills-grid">
-            <div class="skill-card">NodeJS</div>
-            <div class="skill-card">ExpressJS</div>
-            <div class="skill-card">ReactJS</div>
-            <div class="skill-card">Langchain</div>
-            <div class="skill-card">Django</div>
-            <div class="skill-card">Flask</div>
-          </div>
-        </div>
-        <br>
-        <!-- Technologies & Tools -->
-        <div class="skills-category">
-          <div class="subcategory-heading">
-            <span>Technologies & Tools</span>
-          </div>
-          <div class="skills-grid">
-            <div class="skill-card">Power BI</div>
-            <div class="skill-card">Tableau</div>
-            <div class="skill-card">AWS</div>
-            <div class="skill-card">Postman</div>
-            <div class="skill-card">Git</div>
-            <div class="skill-card">GitHub</div>
-            <div class="skill-card">Bloomberg</div>
-          </div>
-        </div>
-        <br>
-        <!-- Other -->
-        
-      </div>
-    </section>
-    
-    <section id="education-experience" class="education-experience-section">
-      <div class="section-heading">
-        <h2>Education & Experience</h2>
-      </div>
-      <div class="edu-exp-container">
-        <div class="education">
-          <h3>Education</h3>
-          <ul>
-            <li>
-              <strong>Stevens Institute of Technology</strong><br>
-              Master of Science in Computer Science (Aug 2023 - Present)
-            </li>
-            <li>
-              <strong>University of Mumbai</strong><br>
-              Bachelor of Engineering in Information Technology (July 2017 - June 2021)
-            </li>
-          </ul>
-        </div>
-        <div class="experience">
-          <h3>Experience</h3>
-          <ul>
-            <li>
-              <strong>Hanlon Financial System Center</strong><br>
-              Graduate Lab Assistant (July 2024 - Present)
-            </li>
-            <li>
-              <strong>Tata Consultancy Services (TCS)</strong><br>
-              Software Engineer (July 2021 - July 2023)
-            </li>
-            <li>
-              <strong>Mindscript Thane, India</strong><br>
-              Web Developer (June 2019 - July 2019)
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    
-    
+  </section>
   
-    <section id="resume" class="resume-section">
-      <div class="resume-heading">
-        <h2>Resume</h2>
+  <section id="resume" class="resume-section">
+    <div class="resume-heading">
+      <h2>Resume</h2>
+    </div>
+    <div class="resume-container">
+      <div class="resume-text">
+        <p>
+          Download my resume to explore my skills, academic achievements, and professional experience in detail. It highlights my journey and technical expertise that can contribute to innovative projects and organizational growth.
+        </p>
+        <a href="files/Yash_Deshpande-Resume.pdf" class="download-btn" download>
+          <i class="fas fa-download"></i> Download Resume
+        </a>
       </div>
-      <div class="resume-container">
-        <div class="resume-text">
-          <p>
-            Download my resume to explore my skills, academic achievements, and professional experience in detail. It highlights my journey and technical expertise that can contribute to innovative projects and organizational growth.
-          </p>
-          <a href="files/Yash_Deshpande-Resume.pdf" class="download-btn" download>
-            <i class="fas fa-download"></i> Download Resume
-          </a>
+      <div class="resume-preview">
+        <img src="images/resume_preview.jpg" alt="Resume Preview">
+      </div>
+    </div>
+  </section>
+  
+  <section id="education-experience" class="education-experience-section">
+    <div class="section-heading">
+      <h2>Education & Experience</h2>
+    </div>
+    <div class="edu-exp-container">
+      <!-- Education Timeline on the Left -->
+      <div class="edu-section">
+        <div class="timeline-item">
+          <div class="timeline-icon">
+            🎓
+          </div>
+          <div class="timeline-content">
+            <h3>Stevens Institute of Technology</h3>
+            <p>Master of Science in Computer Science</p>
+            <span class="timeline-date">Aug 2023 - Present</span>
+          </div>
         </div>
-        <div class="resume-preview">
-          <img src="images/resume_preview.jpg" alt="Resume Preview">
+        <div class="timeline-item">
+          <div class="timeline-icon">
+            🎓
+          </div>
+          <div class="timeline-content">
+            <h3>University of Mumbai</h3>
+            <p>Bachelor of Engineering in Information Technology</p>
+            <span class="timeline-date">July 2017 - June 2021</span>
+          </div>
         </div>
       </div>
-    </section>
- 
-    
-    <section id="projects" class="projects-section">
+  
+      <!-- Experience Timeline on the Right -->
+      <div class="exp-section">
+        <div class="timeline-item">
+          <div class="timeline-icon">
+            💼
+          </div>
+          <div class="timeline-content">
+            <h3>Hanlon Financial System Center</h3>
+            <p>Graduate Lab Assistant</p>
+            <span class="timeline-date">July 2024 - Present</span>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-icon">
+            💼
+          </div>
+          <div class="timeline-content">
+            <h3>Tata Consultancy Services (TCS)</h3>
+            <p>Software Engineer</p>
+            <span class="timeline-date">July 2021 - July 2023</span>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-icon">
+            💼
+          </div>
+          <div class="timeline-content">
+            <h3>Mindscript Thane, India</h3>
+            <p>Web Developer</p>
+            <span class="timeline-date">June 2019 - July 2019</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects-section" class="projects-section">
+    <div class="container">
       <div class="projects-heading">
-        <h2>Projects</h2>
+        <h2>My Projects</h2>
       </div>
       <div class="projects-grid">
-        <div class="project-box" onclick="showDetails('project1')">
-          <h3>PawPal - A Petcare Website</h3>
-          <button class="view-btn">View Details</button>
+        <!-- Project 1 -->
+        <div class="project-box" onclick="openModal('project1')">
+          <h3 class="project-title">PawPal</h3>
+          <p class="project-tech">HTML, CSS, JavaScript, Node.js</p>
+          <button class="view-btn">View Project</button>
         </div>
-        <div class="project-box" onclick="showDetails('project2')">
-          <h3>Student Information Management System</h3>
-          <button class="view-btn">View Details</button>
+        <!-- Project 2 -->
+        <div class="project-box" onclick="openModal('project2')">
+          <h3 class="project-title">Student Info Management</h3>
+          <p class="project-tech">HTML, CSS, JavaScript, PHP, MySQL</p>
+          <button class="view-btn">View Project</button>
         </div>
-        <div class="project-box" onclick="showDetails('project3')">
-          <h3>Social Media Campaign Analysis </h3>
-          <button class="view-btn">View Details</button>
+        <!-- Project 3 -->
+        <div class="project-box" onclick="openModal('project3')">
+          <h3 class="project-title">Social Media Analysis</h3>
+          <p class="project-tech">Tableau, Data Visualization</p>
+          <button class="view-btn">View Project</button>
         </div>
-        <div class="project-box" onclick="showDetails('project4')">
-          <h3>Depression Detection using Tweets Data</h3>
-          <button class="view-btn">View Details</button>
+        <!-- Project 4 -->
+        <div class="project-box" onclick="openModal('project4')">
+          <h3 class="project-title">Depression Detection</h3>
+          <p class="project-tech">Python, Machine Learning</p>
+          <button class="view-btn">View Project</button>
         </div>
-        <div class="project-box" onclick="showDetails('project5')">
-          <h3>Customer Conversion Prediction for Insurance Sales</h3>
-          <button class="view-btn">View Details</button>
+        <!-- Project 5 -->
+        <div class="project-box" onclick="openModal('project5')">
+          <h3 class="project-title">Customer Conversion Prediction</h3>
+          <p class="project-tech">Python, Machine Learning</p>
+          <button class="view-btn">View Project</button>
         </div>
-        <div class="project-box" onclick="showDetails('project6')">
-          <h3>Social Nex- A Social Media Website</h3>
-          <button class="view-btn">View Details</button>
+        <!-- Project 6 -->
+        <div class="project-box" onclick="openModal('project6')">
+          <h3 class="project-title">SocialNex</h3>
+          <p class="project-tech">Django, Python</p>
+          <button class="view-btn">View Project</button>
         </div>
-        <div class="project-box" onclick="showDetails('project7')">
-          <h3>Transforming Coffee Shop Supplier Management with AWS Microservices
-          </h3>
-          <button class="view-btn">View Details</button>
+        <!-- Project 7 -->
+        <div class="project-box" onclick="openModal('project7')">
+          <h3 class="project-title">Coffee Shop Microservices</h3>
+          <p class="project-tech">AWS, Docker, ECS</p>
+          <button class="view-btn">View Project</button>
         </div>
-        <div class="project-box" onclick="showDetails('project8')">
-          <h3>Chemotherapy Suitability Prediction (Research Paper)</h3>
-          <button class="view-btn">View Details</button>
+        <!-- Project 8 -->
+        <div class="project-box" onclick="openModal('project8')">
+          <h3 class="project-title">Chemotherapy Prediction</h3>
+          <p class="project-tech">Python, Machine Learning</p>
+          <button class="view-btn">View Project</button>
         </div>
-        <div class="project-box" onclick="showDetails('project9')">
-          <h3>Sari Disease Survey App for Solapur District</h3>
-          <button class="view-btn">View Details</button>
+        <!-- Project 9 -->
+        <div class="project-box" onclick="openModal('project9')">
+          <h3 class="project-title">SARI Disease Survey</h3>
+          <p class="project-tech">HTML, CSS, PHP, JavaScript</p>
+          <button class="view-btn">View Project</button>
         </div>
-        <div class="project-box" onclick="showDetails('project10')">
-          <h3>USA Border Crossing Data Analysis</h3>
-          <button class="view-btn">View Details</button>
+        <!-- Project 10 -->
+        <div class="project-box" onclick="openModal('project10')">
+          <h3 class="project-title">Border Crossing Data Analysis</h3>
+          <p class="project-tech">Tableau, Data Visualization</p>
+          <button class="view-btn">View Project</button>
         </div>
-       </div>
-    </section>
-    
-    <!-- Popup Modal -->
-    <div id="project-details-modal" class="modal">
-      <div class="modal-content">
-        <span class="close-btn" onclick="closeDetails()">&times;</span>
-        <div id="project-details"></div>
-        <a id="modal-link" href="#" target="_blank" class="view-btn1">View Project</a>
       </div>
     </div>
   
-    
-    
-    
-    <section id="contact" class="contact-section">
-      <div class="container">
-        <h2>Contact Me</h2>
-        <p>Feel free to reach out for any inquiries, feedback, or collaborations. I'm just an email away!</p>
-        
-        <div class="contact-info">
-          <div class="contact-item">
-            <i class="fas fa-envelope"></i>
-            <h4>Email</h4>
-            <p><a href="mailto:your-email@example.com">ydeshpan1@stevens.edu</a></p>
-          </div>
-          <div class="contact-item">
-            <i class="fas fa-phone-alt"></i>
-            <h4>Phone</h4>
-            <p>+1 (201)-492-8776</p>
-          </div>
-          <div class="contact-item">
-            <i class="fas fa-map-marker-alt"></i>
-            <h4>Location</h4>
-            <p>Jersey City NJ, USA</p>
-          </div>
-        </div>
-        
-        <form action="https://formspree.io/f/xjkkpwdy" method="POST" class="contact-form">
-          <div class="form-group">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" placeholder="John Harris" required>
-          </div>
-          <div class="form-group">
-            <label for="email">Your Email</label>
-            <input type="email" id="email" name="email" placeholder="johnharris@example.com" required>
-          </div>
-          <div class="form-group">
-            <label for="message">Your Message</label>
-            <textarea id="message" name="message" placeholder="Write your message..." rows="6" required></textarea>
-          </div>
-          <button type="submit" class="submit-btn">Send Message</button>
-        </form>
+    <!-- Modal Structure -->
+    <div id="project-modal" class="modal">
+      <div class="modal-content">
+        <button class="modal-close" onclick="closeModal()">×</button>
+        <div id="modal-project-content">
+         </div>
       </div>
-    </section>
- <div>
-  <footer>
-    <p>&copy;2025 Designed by Yash Deshpande</p>
-  </footer>
-</div>
+    </div>
+  </section>
+  
+    
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <p>Feel free to reach out for any inquiries, feedback, or collaborations. I'm just an email away!</p>
+      
+      <div class="contact-info">
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <h4>Email</h4>
+          <p><a href="mailto:your-email@example.com">ydeshpan1@stevens.edu</a></p>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-phone-alt"></i>
+          <h4>Phone</h4>
+          <p>+1 (201)-492-8776</p>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <h4>Location</h4>
+          <p>Jersey City NJ, USA</p>
+        </div>
+      </div>
+      
+      <form action="https://formspree.io/f/xjkkpwdy" method="POST" class="contact-form">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" placeholder="John Harris" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Your Email</label>
+          <input type="email" id="email" name="email" placeholder="johnharris@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" placeholder="Write your message..." rows="6" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+    </div>
+  </section>
   <script src="scripts/script.js"></script>
-</body>
-</html>
+
+  </body>
+  
+  
