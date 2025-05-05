@@ -162,6 +162,18 @@ function openModal(projectId) {
       "description": "In this project, I conducted an in-depth analysis of Border Crossing Entry Data using <strong>Tableau</strong>, uncovering trends and insights. The analysis features an engaging interactive story with over 8 story points, including two comprehensive dashboards with multiple graphs and four independent plots. The project emphasizes data visualization best practices, ensuring clear organization, engaging design, and a coherent narrative that enhances the understanding of border crossing trends and their implications.",
       "technologies": "Tableau, Data Visualization",
       "url": "https://github.com/yashdd/USA_Border_Crossing_Data_Analysis"
+    },
+    project12: {
+      "title": "AttendEazy",
+      "description": "AttendEazy is a full-stack event management and ticketing platform where users can discover, register, and book events. Organizers can add and manage events through a custom dashboard, with integrated Stripe payments, QR-based ticketing, and a real-time attendee tracker. Built with React, Node.js, Express, and MongoDB, the platform supports both user and host experiences with responsive design and secure routing.",
+      "technologies": "React, Node.js, Express, MongoDB, Redux, Stripe",
+      "url": "https://github.com/yashdd/Attendeazy"
+    },
+    project11: {
+      "title": "SurroundShield",
+  "description": "SurroundShield is an AI-powered risk analysis assistant that provides personalized safety guidance based on weather, location, and user profile. It features a React frontend, an Express backend for user handling, a Flask-based service for LLM prompt interaction, and integrates MongoDB for data management. LLaMA 3.3(70B) model was fine-tuned using Databricks for generating real-time responses tailored to contextual inputs.",
+  "technologies": "React, Express, Flask, MongoDB, Databricks, LLaMA",
+  "url": "https://github.com/yashdd/SurroundShield"
     }
   };
 
@@ -180,3 +192,144 @@ function openModal(projectId) {
 function closeModal() {
   document.getElementById("project-modal").style.display = "none";
 }
+
+const filterButtons = document.querySelectorAll('.filter-btn');
+const projectBoxes = document.querySelectorAll('.project-box');
+
+filterButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    // Remove 'active' class from all buttons
+    filterButtons.forEach(btn => btn.classList.remove('active'));
+    button.classList.add('active');
+
+    const filter = button.getAttribute('data-filter');
+
+    projectBoxes.forEach(box => {
+      const category = box.getAttribute('data-category');
+
+      if (filter === 'all' || category === filter) {
+        box.style.display = 'block';
+      } else {
+        box.style.display = 'none';
+      }
+    });
+  });
+});
+
+const chatButton = document.getElementById('chat-button');
+const chatbotFrame = document.getElementById('chatbot-frame');
+const closeButton = document.querySelector('.close-button');
+const notificationBadge = document.querySelector('.notification-badge');
+const messagePopup = document.getElementById('message-popup');
+
+// Message templates for popups
+const messages = [
+  "Hello there! Need any assistance today?",
+  "Got a question? I'm here to help!",
+  "Welcome! How can I assist you today?",
+  "Need some information? Just ask me!"
+];
+
+// Toggle chatbot visibility
+chatButton.addEventListener('click', function() {
+  chatbotFrame.classList.toggle('active');
+  
+  // Hide any active message popups
+  messagePopup.style.display = 'none';
+  
+  // Add wave effect on click
+  chatButton.classList.add('wave-effect');
+  setTimeout(() => {
+    chatButton.classList.remove('wave-effect');
+  }, 1000);
+  
+  // Hide notification badge when opened
+  if (chatbotFrame.classList.contains('active')) {
+    notificationBadge.style.display = 'none';
+  }
+});
+
+// Close chatbot when X is clicked
+closeButton.addEventListener('click', function(e) {
+  e.stopPropagation();
+  chatbotFrame.classList.remove('active');
+});
+
+// Make message popup clickable to open chat
+messagePopup.addEventListener('click', function() {
+  chatbotFrame.classList.add('active');
+  messagePopup.style.display = 'none';
+  notificationBadge.style.display = 'none';
+});
+
+// Function to show message popup
+function showMessagePopup() {
+  if (!chatbotFrame.classList.contains('active')) {
+    // Get random message
+    const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+    messagePopup.querySelector('.message-text').textContent = randomMessage;
+    
+    // Show popup with animation
+    messagePopup.style.display = 'flex';
+    
+    // Reset the animation
+    messagePopup.style.animation = 'none';
+    messagePopup.offsetHeight; // Trigger reflow
+    messagePopup.style.animation = 'slideIn 6s forwards';
+    
+    // Show notification badge
+    setTimeout(() => {
+      notificationBadge.style.display = 'flex';  
+    }, 6000);
+  }
+}
+
+// Show first message popup after delay
+setTimeout(showMessagePopup, 5000);
+
+// Show periodic message popups
+setInterval(function() {
+  if (!chatbotFrame.classList.contains('active')) {
+    showMessagePopup();
+  }
+}, 30000);
+
+// Add typing indicator functionality
+function showTypingIndicator() {
+  if (!chatbotFrame.classList.contains('active')) {
+    const messageText = messagePopup.querySelector('.message-text');
+    const typingIndicator = document.createElement('div');
+    typingIndicator.className = 'typing-indicator';
+    
+    for (let i = 0; i < 3; i++) {
+      const dot = document.createElement('span');
+      dot.className = 'typing-dot';
+      typingIndicator.appendChild(dot);
+    }
+    
+    messageText.textContent = '';
+    messageText.appendChild(typingIndicator);
+    
+    messagePopup.style.display = 'flex';
+    messagePopup.style.animation = 'none';
+    messagePopup.offsetHeight; // Trigger reflow
+    
+    setTimeout(() => {
+      // Replace typing indicator with actual message
+      const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+      messageText.textContent = randomMessage;
+      messagePopup.style.animation = 'slideIn 6s forwards';
+    }, 1500);
+  }
+}
+
+// Occasionally show typing indicator before message
+setInterval(function() {
+  if (!chatbotFrame.classList.contains('active') && Math.random() > 0.5) {
+    showTypingIndicator();
+  }
+}, 45000);
+
+document.getElementById('chat-close-btn').addEventListener('click', function() {
+  document.getElementById('chatbot-frame').classList.remove('active');
+});

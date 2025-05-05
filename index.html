@@ -5,164 +5,284 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Yash Deshpande Portfolio</title>
   <link href="styles/style.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
+
+<div id="chatbot-toggle">
+  <button id="chat-button">
+    💬
+    <span class="notification-badge">1</span>
+  </button>
+</div>
+
+<!-- Chatbot Iframe -->
+<div id="chatbot-frame">
+  <div class="chat-header">
+    <p class="chat-title">Chat Assistant</p>
+    <button class="close-button" id="chat-close-btn">✕</button>
+
+  </div>
+  <iframe 
+    src="https://yashbot-y3u4.onrender.com/"
+    class="frame-content">
+  </iframe>
+</div>
+
+<!-- Message Popup Template (initially hidden) -->
+<div id="message-popup" class="message-popup" style="display: none;">
+  <div class="message-avatar">AI</div>
+  <div class="message-content">
+    <div class="message-sender">Assistant</div>
+    <p class="message-text">Have a question? I'm here to help!</p>
+    <div class="message-cta">Reply</div>
+  </div>
+</div>
 
 <body>
   <header class="navbar">
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about-section">About</a></li>
-        <li><a href="#resume">Resume</a></li>
-        <li><a href="#education-experience">Education</a></li>
-        <li><a href="#projects-section">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <div class="hamburger">&#9776;</div>
-    </nav>
+    <div class="container">
+      <a href="#home" class="logo">Yash's Portfolio</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about-section">About</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#education-experience">Experience</a></li>
+          <li><a href="#projects-section">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </div>
   </header>
   
   <section id="home" class="hero">
     <div class="hero-overlay">
-      <h1 class="hero-title">Hi, I'm Yash Deshpande</h1>
-      <p class="hero-description">
-        A dedicated Computer Science Master's Student at Stevens Institute of Technology.
-      </p>
-      <p class="hero-specialization">
-        I am based in Jersey City and passionate about software development, machine learning, and AI technologies.
-      </p>
-      <a href="#about-section" class="cta-button">Learn More</a>
+      <div class="hero-content">
+        <p class="pre-title">Welcome to my portfolio</p>
+        <h1 class="hero-title">Hi, I'm <span>Yash Deshpande</span></h1>
+        <div class="hero-description">
+          <div class="typing-container">
+            <p id="typing-text">A dedicated Computer Science Master's Student at Stevens Institute of Technology.</p>
+          </div>
+        </div>
+        <p class="hero-specialization">
+          Based in Jersey City and passionate about software development, machine learning, and AI technologies.
+        </p>
+        <div class="cta-container">
+          <a href="#about-section" class="cta-button primary">Learn More</a>
+          <a href="#contact" class="cta-button secondary">Get In Touch</a>
+        </div>
+      </div>
     </div>
   </section>
 
   <section id="about-section" class="about-section">
-    <div class="about-container">
-      <!-- Left Partition -->
-      <div class="about-left">
-        <div class="about-photo">
-          <img src="images/yash_deshpande.png" alt="Yash Deshpande" id="profile-photo">
-        </div>
-        <h4 class="skills-heading">SKILLS</h4>
-        <div class="skills-category">
-          <div class="skills-card">
-            <h4 class="category-title">Programming Languages</h4>
-            <p>Python, JavaScript, SQL, C, C++, Java, R, HTML, CSS, PHP</p>
-          </div>
-          <div class="skills-card">
-            <h4 class="category-title">Databases</h4>
-            <p>MongoDB, MySQL, PostgreSQL</p>
-          </div>
-          <div class="skills-card">
-            <h4 class="category-title">Frameworks and Libraries</h4>
-            <p>NodeJS, ExpressJS, ReactJS, Langchain, Django, Flask, Pytorch, Scikit-learn, Tensorflow, Keras, Pandas, Numpy, Matplotlib, Seaborn, Langchain</p>
-          </div>
-          <div class="skills-card">
-            <h4 class="category-title">Technologies & Tools</h4>
-            <p>Power BI, Tableau, AWS, Postman, Git, GitHub, Bloomberg, Pega RPA, Blueprism</p>
-          </div>
-        </div>
+    <div class="container">
+      <div class="section-heading">
+        <h2>About Me</h2>
       </div>
-  
-      <div class="about-right">
-        <h2>ABOUT ME</h2>
-        <p>
-          Hello, I'm Yash Deshpande, a passionate Computer Science master's student at Stevens Institute of Technology. I did my undergrad in Information Technology from University of Mumbai.
-        </p>
-        <p>
-          With a passion for technology and innovation, I am focused on advancing my skills in Software development, Machine learning, and Data analysis. My academic journey, combined with my Work Experience at Tata Consultancy Services (TCS) has equipped me with a robust technical foundation and a problem-solving mindset. During my undegrad I worked on a project named Student Information Management System (SIMS) which is currently live and used by my undergrad college for 5+ years with more than 10,000 users till date. I have a strong interest in Large Language Models and actively leverage them to explore and implement diverse use cases, pushing the boundaries of innovation and practical applications. Explore my portfolio to learn more about my work and the projects that drive my enthusiasm for the tech world.     </p>
-        <div class="about-details">
-          <p><strong>Email:</strong> ydeshpan1@stevens.edu</p>
-          <p><strong>Phone:</strong> +1 (201)-492-8776</p>
-          <p><strong>City:</strong> Jersey City, USA</p>
-          <p><strong>Age:</strong> 24</p>
-          <p><strong>Degree:</strong> Masters of Science (MS)</p>
-          <p><strong>Course:</strong> Computer Science</p>
-          <p><strong>College:</strong> Stevens Institute of Technology</p>
-          <p><strong>Expected Graduation:</strong> May 2025</p>
+      <div class="about-container">
+        <!-- Left Partition -->
+        <div class="about-left">
+          <div class="about-photo-container">
+            <div class="about-photo">
+              <img src="images/yash_deshpande.png" alt="Yash Deshpande" id="profile-photo">
+            </div>
+          </div>
+          <div class="skills-section">
+            <h4 class="skills-heading">My Skills</h4>
+            <div class="skills-category">
+              <div class="skills-card">
+                <div class="skills-icon"><i class="fas fa-code"></i></div>
+                <h4 class="category-title">Programming Languages</h4>
+                <p>Python, JavaScript, SQL, C, C++, Java, R, HTML, CSS, PHP</p>
+              </div>
+              <div class="skills-card">
+                <div class="skills-icon"><i class="fas fa-database"></i></div>
+                <h4 class="category-title">Databases</h4>
+                <p>MongoDB, MySQL, PostgreSQL</p>
+              </div>
+              <div class="skills-card">
+                <div class="skills-icon"><i class="fas fa-laptop-code"></i></div>
+                <h4 class="category-title">Frameworks & Libraries</h4>
+                <p>NodeJS, ExpressJS, ReactJS, Langchain, Django, Flask, Pytorch, Scikit-learn, Tensorflow, Keras</p>
+              </div>
+              <div class="skills-card">
+                <div class="skills-icon"><i class="fas fa-tools"></i></div>
+                <h4 class="category-title">Technologies & Tools</h4>
+                <p>Power BI, Tableau, AWS, Postman, Git, GitHub, Bloomberg, Pega RPA, Blueprism</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <div class="about-right">
+          <div class="bio-section">
+            <p class="greeting">Hello there!</p>
+            <p>
+              I'm Yash Deshpande, a passionate Computer Science master's student at Stevens Institute of Technology. I completed my undergrad in Information Technology from University of Mumbai.
+            </p>
+            <p>
+              With a passion for technology and innovation, I am focused on advancing my skills in Software development, Machine learning, and Data analysis. My academic journey, combined with my Work Experience at Tata Consultancy Services (TCS) has equipped me with a robust technical foundation and a problem-solving mindset.
+            </p>
+            <p>
+              During my undergrad I worked on a project named Student Information Management System (SIMS) which is currently live and used by my undergrad college for 5+ years with more than 10,000 users till date. I have a strong interest in Large Language Models and actively leverage them to explore and implement diverse use cases, pushing the boundaries of innovation and practical applications.
+            </p>
+          </div>
+          <div class="about-details">
+            <div class="details-grid">
+              <div class="detail-item">
+                <span class="detail-icon"><i class="fas fa-envelope"></i></span>
+                <div class="detail-content">
+                  <h5>Email</h5>
+                  <p>ydeshpan1@stevens.edu</p>
+                </div>
+              </div>
+              <div class="detail-item">
+                <span class="detail-icon"><i class="fas fa-phone"></i></span>
+                <div class="detail-content">
+                  <h5>Phone</h5>
+                  <p>+1 (201)-492-8776</p>
+                </div>
+              </div>
+              <div class="detail-item">
+                <span class="detail-icon"><i class="fas fa-map-marker-alt"></i></span>
+                <div class="detail-content">
+                  <h5>Location</h5>
+                  <p>Jersey City, USA</p>
+                </div>
+              </div>
+              <div class="detail-item">
+                <span class="detail-icon"><i class="fas fa-user"></i></span>
+                <div class="detail-content">
+                  <h5>Age</h5>
+                  <p>25</p>
+                </div>
+              </div>
+              <div class="detail-item">
+                <span class="detail-icon"><i class="fas fa-graduation-cap"></i></span>
+                <div class="detail-content">
+                  <h5>Degree</h5>
+                  <p>Masters of Science (MS)</p>
+                </div>
+              </div>
+              <div class="detail-item">
+                <span class="detail-icon"><i class="fas fa-book"></i></span>
+                <div class="detail-content">
+                  <h5>Course</h5>
+                  <p>Computer Science</p>
+                </div>
+              </div>
+              <div class="detail-item">
+                <span class="detail-icon"><i class="fas fa-university"></i></span>
+                <div class="detail-content">
+                  <h5>College</h5>
+                  <p>Stevens Institute of Technology</p>
+                </div>
+              </div>
+              <div class="detail-item">
+                <span class="detail-icon"><i class="fas fa-calendar-alt"></i></span>
+                <div class="detail-content">
+                  <h5>Expected Graduation</h5>
+                  <p>May 2025</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
-  
   <section id="resume" class="resume-section">
-    <div class="resume-heading">
-      <h2>Resume</h2>
-    </div>
-    <div class="resume-container">
-      <div class="resume-text">
-        <p>
-          Download my resume to explore my skills, academic achievements, and professional experience in detail. It highlights my journey and technical expertise that can contribute to innovative projects and organizational growth.
+    <div class="container">
+      <div class="section-heading">
+        <h2>Resume</h2>
+      </div>
+      <div class="resume-content">
+        <p class="resume-tagline">
+          Download my resume to explore my skills, academic achievements, and work experience.
         </p>
         <a href="files/Yash_Deshpande-Resume.pdf" class="download-btn" download>
           <i class="fas fa-download"></i> Download Resume
         </a>
       </div>
-      <div class="resume-preview">
-        <img src="images/resume_preview.jpg" alt="Resume Preview">
-      </div>
     </div>
   </section>
   
-  <section id="education-experience" class="education-experience-section">
-    <div class="section-heading">
-      <h2>Education & Experience</h2>
-    </div>
-    <div class="edu-exp-container">
-      <!-- Education Timeline on the Left -->
-      <div class="edu-section">
-        <div class="timeline-item">
-          <div class="timeline-icon">
-            🎓
-          </div>
-          <div class="timeline-content">
-            <h3>Stevens Institute of Technology</h3>
-            <p>Master of Science in Computer Science</p>
-            <span class="timeline-date">Aug 2023 - Present</span>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-icon">
-            🎓
-          </div>
-          <div class="timeline-content">
-            <h3>University of Mumbai</h3>
-            <p>Bachelor of Engineering in Information Technology</p>
-            <span class="timeline-date">July 2017 - June 2021</span>
-          </div>
-        </div>
-      </div>
   
-      <!-- Experience Timeline on the Right -->
-      <div class="exp-section">
-        <div class="timeline-item">
-          <div class="timeline-icon">
-            💼
-          </div>
-          <div class="timeline-content">
-            <h3>Hanlon Financial System Center</h3>
-            <p>Graduate Lab Assistant</p>
-            <span class="timeline-date">July 2024 - Present</span>
+  <section id="education-experience" class="education-experience-section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Education & Experience</h2>
+      </div>
+      <div class="edu-exp-container">
+        <!-- Education Timeline on the Left -->
+        <div class="edu-section">
+          <h3 class="subsection-title"><i class="fas fa-graduation-cap"></i> Education</h3>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-icon">
+                <i class="fas fa-university"></i>
+              </div>
+              <div class="timeline-content">
+                <h3>Stevens Institute of Technology</h3>
+                <p>Master of Science in Computer Science</p>
+                <span class="timeline-date"><i class="far fa-calendar-alt"></i> Aug 2023 - May 2025</span>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-icon">
+                <i class="fas fa-university"></i>
+              </div>
+              <div class="timeline-content">
+                <h3>University of Mumbai</h3>
+                <p>Bachelor of Engineering in Information Technology</p>
+                <span class="timeline-date"><i class="far fa-calendar-alt"></i> July 2017 - June 2021</span>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="timeline-item">
-          <div class="timeline-icon">
-            💼
-          </div>
-          <div class="timeline-content">
-            <h3>Tata Consultancy Services (TCS)</h3>
-            <p>Software Engineer</p>
-            <span class="timeline-date">July 2021 - July 2023</span>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-icon">
-            💼
-          </div>
-          <div class="timeline-content">
-            <h3>Mindscript Thane, India</h3>
-            <p>Web Developer</p>
-            <span class="timeline-date">June 2019 - July 2019</span>
+    
+        <!-- Experience Timeline on the Right -->
+        <div class="exp-section">
+          <h3 class="subsection-title"><i class="fas fa-briefcase"></i> Experience</h3>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-icon">
+                <i class="fas fa-laptop"></i>
+              </div>
+              <div class="timeline-content">
+                <h3>Hanlon Financial System Center</h3>
+                <p>Graduate Lab Assistant</p>
+                <span class="timeline-date"><i class="far fa-calendar-alt"></i> July 2024 - Present</span>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-icon">
+                <i class="fas fa-building"></i>
+              </div>
+              <div class="timeline-content">
+                <h3>Tata Consultancy Services (TCS)</h3>
+                <p>Software Engineer</p>
+                <span class="timeline-date"><i class="far fa-calendar-alt"></i> July 2021 - July 2023</span>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-icon">
+                <i class="fas fa-code"></i>
+              </div>
+              <div class="timeline-content">
+                <h3>Mindscript Thane, India</h3>
+                <p>Web Developer</p>
+                <span class="timeline-date"><i class="far fa-calendar-alt"></i> June 2019 - July 2019</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -171,73 +291,124 @@
 
   <section id="projects-section" class="projects-section">
     <div class="container">
-      <div class="projects-heading">
+      <div class="section-heading">
         <h2>My Projects</h2>
       </div>
-      <div class="projects-grid">
-        <!-- Project 1 -->
-        <div class="project-box" onclick="openModal('project1')">
-          <h3 class="project-title">PawPal</h3>
-          <p class="project-tech">Petcare Website</p>
-          <button class="view-btn">View Project</button>
+      <div class="projects-container">
+        <div class="projects-filter">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="web">Web Development</button>
+          <button class="filter-btn" data-filter="ml">AI and ML</button>
+          <button class="filter-btn" data-filter="data">Data Analysis</button>
         </div>
-        <!-- Project 2 -->
-        <div class="project-box" onclick="openModal('project2')">
-          <h3 class="project-title">Student Information Management System</h3>
-          <p class="project-tech">College Website</p>
-          <button class="view-btn">View Project</button>
-        </div>
-        <!-- Project 3 -->
-        <div class="project-box" onclick="openModal('project3')">
-          <h3 class="project-title">Social Media Engagement Analysis Using Tableau</h3>
-          <p class="project-tech">Tableau Analytics Project</p>
-          <button class="view-btn">View Project</button>
-        </div>
-        <!-- Project 4 -->
-        <div class="project-box" onclick="openModal('project4')">
-          <h3 class="project-title">Depression Detection using Tweets Data
-          </h3>
-          <p class="project-tech">Machine Learning</p>
-          <button class="view-btn">View Project</button>
-        </div>
-        <!-- Project 5 -->
-        <div class="project-box" onclick="openModal('project5')">
-          <h3 class="project-title">Customer Conversion Prediction for Insurance Sales
-          </h3>
-          <p class="project-tech">Machine Learning</p>
-          <button class="view-btn">View Project</button>
-        </div>
-        <!-- Project 6 -->
-        <div class="project-box" onclick="openModal('project6')">
-          <h3 class="project-title">SocialNex</h3>
-          <p class="project-tech">Social Media Website</p>
-          <button class="view-btn">View Project</button>
-        </div>
-        <!-- Project 7 -->
-        <div class="project-box" onclick="openModal('project7')">
-          <h3 class="project-title">Transforming Coffee Shop Supplier Management with AWS Microservices          </h3>
-          <p class="project-tech">AWS, Docker, ECS</p>
-          <button class="view-btn">View Project</button>
-        </div>
-        <!-- Project 8 -->
-        <div class="project-box" onclick="openModal('project8')">
-          <h3 class="project-title">Chemotherapy Suitability Prediction</h3>
-          <p class="project-tech">Machine Learning</p>
-          <button class="view-btn">View Project</button>
-        </div>
-        <!-- Project 9 -->
-        <div class="project-box" onclick="openModal('project9')">
-          <h3 class="project-title">SARI Disease Survey App for Solapur District
-          </h3>
-          <p class="project-tech">Survey Application for Ashaworkers</p>
-          <button class="view-btn">View Project</button>
-        </div>
-        <!-- Project 10 -->
-        <div class="project-box" onclick="openModal('project10')">
-          <h3 class="project-title">USA Border Crossing Data Analysis
-          </h3>
-          <p class="project-tech">Tableau Analytics Project</p>
-          <button class="view-btn">View Project</button>
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <div class="project-box" data-category="web" onclick="openModal('project1')">
+            <div class="project-content">
+              <div class="project-icon"><i class="fas fa-paw"></i></div>
+              <h3 class="project-title">PawPal</h3>
+              <p class="project-tech">Petcare Website</p>
+              <button class="view-btn">View Project</button>
+            </div>
+          </div>
+          <!-- Project 2 -->
+          <div class="project-box" data-category="web" onclick="openModal('project2')">
+            <div class="project-content">
+              <div class="project-icon"><i class="fas fa-user-graduate"></i></div>
+              <h3 class="project-title">Student Information Management System</h3>
+              <p class="project-tech">College Website</p>
+              <button class="view-btn">View Project</button>
+            </div>
+          </div>
+          <!-- Project 3 -->
+          <div class="project-box" data-category="data" onclick="openModal('project3')">
+            <div class="project-content">
+              <div class="project-icon"><i class="fas fa-chart-line"></i></div>
+              <h3 class="project-title">Social Media Engagement Analysis</h3>
+              <p class="project-tech">Tableau Analytics Project</p>
+              <button class="view-btn">View Project</button>
+            </div>
+          </div>
+          <!-- Project 4 -->
+          <div class="project-box" data-category="ml" onclick="openModal('project4')">
+            <div class="project-content">
+              <div class="project-icon"><i class="fas fa-brain"></i></div>
+              <h3 class="project-title">Depression Detection using Tweets Data</h3>
+              <p class="project-tech">Machine Learning</p>
+              <button class="view-btn">View Project</button>
+            </div>
+          </div>
+          <!-- Project 5 -->
+          <div class="project-box" data-category="ml" onclick="openModal('project5')">
+            <div class="project-content">
+              <div class="project-icon"><i class="fas fa-users"></i></div>
+              <h3 class="project-title">Customer Conversion Prediction</h3>
+              <p class="project-tech">Machine Learning</p>
+              <button class="view-btn">View Project</button>
+            </div>
+          </div>
+          <!-- Project 6 -->
+          <div class="project-box" data-category="web" onclick="openModal('project6')">
+            <div class="project-content">
+              <div class="project-icon"><i class="fas fa-share-alt"></i></div>
+              <h3 class="project-title">SocialNex</h3>
+              <p class="project-tech">Social Media Website</p>
+              <button class="view-btn">View Project</button>
+            </div>
+          </div>
+          <!-- Project 7 -->
+          <div class="project-box" data-category="web" onclick="openModal('project7')">
+            <div class="project-content">
+              <div class="project-icon"><i class="fas fa-coffee"></i></div>
+              <h3 class="project-title">Coffee Shop Supply Management</h3>
+              <p class="project-tech">AWS, Docker, ECS</p>
+              <button class="view-btn">View Project</button>
+            </div>
+          </div>
+          <!-- Project 8 -->
+          <div class="project-box" data-category="ml" onclick="openModal('project8')">
+            <div class="project-content">
+              <div class="project-icon"><i class="fas fa-heartbeat"></i></div>
+              <h3 class="project-title">Chemotherapy Suitability Prediction</h3>
+              <p class="project-tech">Machine Learning</p>
+              <button class="view-btn">View Project</button>
+            </div>
+          </div>
+          <!-- Project 9 -->
+          <div class="project-box" data-category="web" onclick="openModal('project9')">
+            <div class="project-content">
+              <div class="project-icon"><i class="fas fa-clipboard-list"></i></div>
+              <h3 class="project-title">SARI Disease Survey App</h3>
+              <p class="project-tech">Survey Application</p>
+              <button class="view-btn">View Project</button>
+            </div>
+          </div>
+          <!-- Project 10 -->
+          <div class="project-box" data-category="data" onclick="openModal('project10')">
+            <div class="project-content">
+              <div class="project-icon"><i class="fas fa-border-all"></i></div>
+              <h3 class="project-title">USA Border Crossing Data Analysis</h3>
+              <p class="project-tech">Tableau Analytics Project</p>
+              <button class="view-btn">View Project</button>
+            </div>
+          </div>
+          <div class="project-box" data-category="ml" onclick="openModal('project11')">
+            <div class="project-content">
+              <div class="project-icon"><i class="fas fa-shield-alt"></i></div>
+              <h3 class="project-title">SurroundShield</h3>
+              <p class="project-tech">React • Flask • LangChain • MongoDB</p>
+              <button class="view-btn">View Project</button>
+            </div>
+          </div>
+          <div class="project-box" data-category="web" onclick="openModal('project12')">
+            <div class="project-content">
+              <div class="project-icon"><i class="fas fa-calendar-check"></i></div>
+              <h3 class="project-title">AttendEazy</h3>
+              <p class="project-tech">MERN • Stripe • QR Ticketing • Firebase Auth</p>
+              <button class="view-btn">View Project</button>
+            </div>
+          </div>
+          
         </div>
       </div>
     </div>
@@ -254,53 +425,91 @@
   
   <section id="contact" class="contact-section">
     <div class="container">
-      <h2>Contact Me</h2>
-      <p>Feel free to reach out for any inquiries, feedback, or collaborations. I'm just an email away!</p>
+      <div class="section-heading">
+        <h2>Contact Me</h2>
+      </div>
+      <p class="contact-intro">Feel free to reach out for any inquiries, feedback, or collaborations. I'm just an email away!</p>
       
-      <div class="contact-info">
-        <div class="contact-item">
-          <i class="fas fa-envelope"></i>
-          <h4>Email</h4>
-          <p><a href="mailto:your-email@example.com">ydeshpan1@stevens.edu</a></p>
+      <div class="contact-container">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-details">
+              <h4>Email</h4>
+              <p><a href="mailto:ydeshpan1@stevens.edu">ydeshpan1@stevens.edu</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <div class="contact-details">
+              <h4>Phone</h4>
+              <p>+1 (201)-492-8776</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="contact-details">
+              <h4>Location</h4>
+              <p>Jersey City NJ, USA</p>
+            </div>
+          </div>
         </div>
-        <div class="contact-item">
-          <i class="fas fa-phone-alt"></i>
-          <h4>Phone</h4>
-          <p>+1 (201)-492-8776</p>
-        </div>
-        <div class="contact-item">
-          <i class="fas fa-map-marker-alt"></i>
-          <h4>Location</h4>
-          <p>Jersey City NJ, USA</p>
+        
+        <div class="contact-form-container">
+          <form action="https://formspree.io/f/xjkkpwdy" method="POST" class="contact-form">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="John Harris" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" name="email" placeholder="johnharris@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Job Opportunity" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea id="message" name="message" placeholder="Write your message..." rows="6" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </form>
         </div>
       </div>
+      
       <div class="social-links">
-        <a href="https://www.linkedin.com/in/yash-deshpande-70827417b/" target="_blank" class="social-icon linkedin"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/yashdd" target="_blank" class="social-icon github"><i class="fab fa-github"></i></a>
-        <a href="https://www.instagram.com/yashdeshpande10/?igsh=YXF6d3RjN284M3Jq#" target="_blank" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/yash-deshpande-70827417b/" target="_blank" class="social-icon linkedin">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/yashdd" target="_blank" class="social-icon github">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.instagram.com/yashdeshpande10/?igsh=YXF6d3RjN284M3Jq#" target="_blank" class="social-icon instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
       </div>
-      
-      
-      <form action="https://formspree.io/f/xjkkpwdy" method="POST" class="contact-form">
-        <div class="form-group">
-          <label for="name">Your Name</label>
-          <input type="text" id="name" name="name" placeholder="John Harris" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Your Email</label>
-          <input type="email" id="email" name="email" placeholder="johnharris@example.com" required>
-        </div>
-        <div class="form-group">
-          <label for="message">Your Message</label>
-          <textarea id="message" name="message" placeholder="Write your message..." rows="6" required></textarea>
-        </div>
-        <button type="submit" class="submit-btn">Send Message</button>
-      </form>
     </div>
   </section>
 
   <footer>
-    <p>© 2025 Designed by Yash Deshpande. All rights reserved.</p>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">YD</div>
+        <p class="footer-text">© 2025 Designed by Yash Deshpande. All rights reserved.</p>
+        <div class="back-to-top">
+          <a href="#home"><i class="fas fa-arrow-up"></i></a>
+        </div>
+      </div>
+    </div>
   </footer>
 
   <script src="scripts/script.js"></script>
