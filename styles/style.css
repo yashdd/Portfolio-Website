@@ -1774,3 +1774,37 @@ body.dark-theme {
     right: 12px;
   }
 }
+
+@media screen and (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background-color: var(--primary-color);
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                padding-top: 2rem;
+                gap: 2rem;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease-in-out;
+            }
+
+            .nav-links.active {
+                transform: translateX(0);
+            }
+
+            .nav-links li a {
+                font-size: 1.2rem;
+                padding: 1rem;
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
+        }

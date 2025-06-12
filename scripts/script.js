@@ -1,9 +1,5 @@
 // JavaScript to toggle the navigation menu on smaller screens
-// const navLinks = document.getElementById('nav-links');
 
-// hamburger.addEventListener('click', () => {
-//   navLinks.classList.toggle('active');
-// });
 
 // function showDetails(projectId) {
 //     const projectDetails = {
@@ -91,6 +87,36 @@
 //   function closeDetails() {
 //     document.getElementById("project-details-modal").style.display = "none";
 //   }
+
+// const navLinks = document.getElementsByClassName('nav-links');
+// const hamburger = document.getElementById('hamburger');
+// hamburger.addEventListener('click', () => {
+//   navLinks.classList.toggle('active');
+// });
+ const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('open');
+        });
+
+        // Close menu when clicking on a link (mobile)
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('open');
+            });
+        });
+
+        // Close menu when clicking outside (mobile)
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('open');
+            }
+        });
+
 // Modal handling functions
 function openModal(projectId) {
   const modal = document.getElementById("project-modal");
